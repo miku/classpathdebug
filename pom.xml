@@ -1,26 +1,21 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-
   <groupId>example.org</groupId>
   <artifactId>weirdclasspath</artifactId>
   <version>1.0-SNAPSHOT</version>
   <packaging>jar</packaging>
-
   <name>weirdclasspath</name>
   <url>http://maven.apache.org</url>
-
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
-
   <scm>
     <connection>scm:git:git://github.com/miku/weirdclasspath.git</connection>
     <developerConnection>scm:git:git://github.com/miku/weirdclasspath.git</developerConnection>
     <url>http://github.com/miku/weirdclasspath</url>
     <tag>HEAD</tag>
   </scm>
-
   <build>
     <resources>
       <resource>
@@ -31,7 +26,6 @@
         </excludes>
       </resource>
     </resources>
-
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
@@ -43,7 +37,6 @@
           <showWarnings>true</showWarnings>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-jar-plugin</artifactId>
@@ -64,13 +57,11 @@
           </archive>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>2.10</version>
       </plugin>
-
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>buildnumber-maven-plugin</artifactId>
@@ -84,7 +75,6 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <artifactId>maven-assembly-plugin</artifactId>
         <version>2.4</version>
@@ -129,28 +119,30 @@
           </execution>
         </executions>
       </plugin>
-
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-release-plugin</artifactId>
-        <version>2.4</version><!--$NO-MVN-MAN-VER$ -->
+        <version>2.4</version>
+        <!--$NO-MVN-MAN-VER$ -->
         <!-- m2e complains about a different plugin version being specified in
           the parent pom. However, this is not actually problem for maven. So, we can
           ignore the warning. -->
       </plugin>
-
     </plugins>
-
-</build>
-
+  </build>
   <dependencies>
-<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-<dependency>
-    <groupId>org.apache.commons</groupId>
-    <artifactId>commons-lang3</artifactId>
-    <version>3.4</version>
-</dependency>
-
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-lang3</artifactId>
+      <version>3.4</version>
+    </dependency>
+    <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-math3 -->
+    <dependency>
+      <groupId>org.apache.commons</groupId>
+      <artifactId>commons-math3</artifactId>
+      <version>3.6.1</version>
+    </dependency>
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
